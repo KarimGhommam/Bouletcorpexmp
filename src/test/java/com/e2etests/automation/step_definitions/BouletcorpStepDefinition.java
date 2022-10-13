@@ -18,7 +18,7 @@ public class BouletcorpStepDefinition {
 	@Given("je me connecte sur l application Bouletcorp")
 	public void jeMeConnecteSurLApplicationBouletcorp() {
 		BouletcorpPage.goToUrl();
-		titel = Setup.getDriver().getTitle();
+		titel = Setup.getDriver().getPageSource();
 	}
 
 	@When("je clique sur le bouton Aléatoire")
@@ -26,9 +26,9 @@ public class BouletcorpStepDefinition {
 		BouletcorpPage.clickOnAléatoireLink();
 	}
 
-	@When("je verifie que la page a change")
+	@Then("je verifie que la page a change")
 	public void jeVerifieQueLaPageAChange() {
-		Assert.assertNotEquals(titel,Setup.getDriver().getTitle());
+		Assert.assertNotEquals(titel,Setup.getDriver().getPageSource());
 
 	}
 

@@ -5,5 +5,5 @@ Feature: Je verfie la page
   Scenario: Je me registre sur le site Bouletcorp
     Given je me connecte sur l application Bouletcorp
     When je clique sur le bouton Aléatoire
-    And je verifie que la page a change
-    Then je verifie que les widgets facebook, twitter et tumblr sont bien affichés
+    Then je verifie que la page a change
+    And je verifie que les widgets facebook, twitter et tumblr sont bien affichés
